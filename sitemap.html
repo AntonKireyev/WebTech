@@ -4,11 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>List of Work - Anton Kireyev</title>
+    <!--I learned that you can input your own favicon for your webpage, this is similiar to inserting images except you have to use a .ico file-->
+    <link rel="icon" type="image/camping-icon" href="images/favicon.ico">
+    <title>Work done in WebTech by Anton Kireyev</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inter"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Abel"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Cookie"
+    />
+    <style>
+      h1 {
+        font-family: Roboto;
+        color: #3b6064;
+        text-align: center;
+      }
+      ul {
+        font-size: 1.2em;
+        font-family: Abel;
+        color: #3b6064;
+      }
+      body {
+        background: #f5f5dc;
+        margin-left: 200px;
+        margin-right: 200px;
+      }
+      img {
+        width: 50px;
+      }
+      a {
+        text-decoration: none;
+        color: #55828b;
+        font-family: Abel;
+      }
+      /* To create a horizontal line without using <hr> I decided to use classes within html/css. I created a class for a horizontal line and attached it to a div.
+      I then gave the class certain properties about how long it should be and how wide (thick) it should be as well. I then set the color. */
+      .horizontal-line {
+        width: 100%;
+        height: 2px;
+        background-color: #379634;
+      }
+    </style>
   </head>
   <body>
-    <p><a href="ex01.html">Example 1</a></p>
-    <p><a href="ex04.html"> Example 4</a></p>
-    <p><a href="index.html">Back to home page</a></p>
+    <div class="horizontal-line"></div>
+    <ul>
+      <li><a href="ex01.html">Exercise 01</a></li>
+      <li><a href="index.html">Exercise 03</a></li>
+      <li><a href="ex04.html">Exercise 04</a></li>
+      <li><a href="ex05.html">Exercise 05</a></li>
+      <li><a href="ex06.html">Exercise 06</a></li>
+    </ul>
+    <div class="horizontal-line"></div>
+    <p>
+      <a href="index.html"><img src="images/home.jpg" alt="home button" /></a>
+    </p>
   </body>
 </html>
