@@ -64,10 +64,11 @@
         float: left;
         margin: 20px;
         height: 300px;
-        padding-bottom: 1em;
         transition: 0.5s;
+        border: #379634;
+        border-style: solid;
       }
-      /* I wanted the images to enlarge over hover, I learned the transition, transform(unused here), and scale properties. In addition I read about the :hover selector */
+      /* (https://www.w3schools.com/howto/howto_css_zoom_hover.asp)I wanted the images to enlarge over hover, I learned the transition, transform(unused here), and scale properties. In addition I read about the :hover selector */
       img:hover {
         scale: 1.5;
       }
@@ -83,18 +84,20 @@
         background-color: #379634;
         margin-top: 5px;
       }
-      /* NOT psyched about using a div as a spacer, trying to see if there is another way to do it. Right now the issue is that without this the images are going into other sections */
+      /* NOT psyched about using a div as a spacer, trying to see if there is another way to do it. Right now the issue is that without this the images are going into other sections,
+      I think this might have something to do with the flex property of the images. */
       .spacer {
         width: 100%;
         margin-bottom: 18em;
       }
+      /* included as a way to space this section from the one above it by only using internal css and not inline. */
       .hobbies-head {
         margin-top: 14em;
       }
     </style>
   </head>
   <body>
-    <h1>All About Anton</h1>
+    <h1>All About Anton Kireyev</h1>
     <div class="horizontal-line"></div>
     <!--QUICK LINKS SECTION-->
 
@@ -102,7 +105,7 @@
 
     <a href="#about">About Me</a> | <a href="#hobbies">My Hobbies</a> |
     <a href="#contact">My Contact</a> |
-    <a href="sitemap.html">My Work</a>
+    <a href="sitemap.html">My Projects</a>
 
     <div class="horizontal-line"></div>
     <!-- ABOUT ME SECTION-->
@@ -110,13 +113,12 @@
 
     <p>
       <!-- I decided that I wanted to include captions on my images.-->
-      
-        <img
-          src="images/myself.jpg"
-          alt="picture of myself"
-          title="my time in europe"
-        />
-        
+
+      <img
+        src="images/myself.jpg"
+        alt="picture of myself"
+        title="Vienna, Austria"
+      />
     </p>
 
     <p>
@@ -130,7 +132,7 @@
     <!-- <div class="spacer"></div> -->
     <!-- MY HOBBIES SECTION-->
     <h2 id="hobbies" class="hobbies-head">My Hobbies</h2>
-    
+
     <img
       src="https://cdn.akamai.steamstatic.com/steam/apps/570/capsule_616x353.jpg"
       alt="dota 2 promotional image"
@@ -140,8 +142,9 @@
       During my free time I like to play video games with friends. I
       occasionally join tournaments with a team and compete in open leagues. My
       favorite game to play right now is
-      <a href="https://www.dota2.com/home" target="_blank">Dota 2</a>. I also
-      like to watch sports. My favorite sport would have to be Soccer, I love to
+      <a href="https://www.dota2.com/home" target="_blank">Dota 2</a>. However,
+      I also compete in CS:GO collegiate leagues for Babson Esports. I also like
+      to keep up with sports. My favorite sport would have to be Soccer, I love to
       watch and play it.
     </p>
 
