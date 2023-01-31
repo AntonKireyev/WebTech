@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercise 5</title>
+    <style>
+      /* I chose to do fit-content for width because the page had a scroll bar form left to right) */
+      body {
+        background-image: url("images/music.gif");
+        max-width: fit-content;
+        margin-left: 120px;
+        margin-right: 120px;
+      }
+      ul {
+        list-style-type: style type block;
+      }
+      ol {
+        list-style-type: upper-roman;
+      }
+      /* I was struggling to find a way to just do the beaver image without affecting the other ones, decided to settle on using class for the beaver image and just selecting the class. */
+      .beaver {
+        position: relative;
+        top: 16em;
+        left: 560px;
+        z-index: 1;
+      }
+      /* I also had trouble being able to center the image, I spent some time researching the positioning element and how it is affected when it is relative,
+      considering this I just moved the image to the right by an X amount of pixels so it looks centered. */
+      h3 {
+        position: relative;
+        top: 11em;
+        left: 580px;
+        z-index: 2;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>My Courses</h2>
+    <ul>
+      <li>
+        2023 Spring
+        <ul>
+          <li>Web Technologies</li>
+          <li>Research Writing</li>
+          <li>Marketing</li>
+          <li>Predictive Business Analytics</li>
+          <li>Leading Innovation</li>
+        </ul>
+      </li>
+      <li>
+        2023 Fall
+        <ul>
+          <li>Managerial Accounting</li>
+          <li>Technology and Business Innovation</li>
+          <li>Technology Operations Management</li>
+          <li>Socio-Ecological Systems</li>
+        </ul>
+      </li>
+    </ul>
+    <h2>2022 Fifa World Cup Ranking</h2>
+    <ol>
+      <li>
+        <img
+          src="https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/Argentina.png"
+          alt="argentina flag"
+          height="20"
+        />Argentina
+      </li>
+      <li>
+        <img
+          src="https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/France.png"
+          alt="French flag"
+          height="20"
+        />France
+      </li>
+      <li>
+        <img
+          src="https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/Croatia.png"
+          alt="Croatian flag"
+          height="20"
+        />
+        Croatia
+      </li>
+      <li>
+        <img
+          src="https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/Morocco.png"
+          alt="Moroccan flag"
+          height="20"
+        />
+        Morocco
+      </li>
+    </ol>
+    <img src="images/beaver.jpg" alt="Babson Beaver" class="beaver" />
+    <h3>Go Beavers!</h3>
+  </body>
+</html>

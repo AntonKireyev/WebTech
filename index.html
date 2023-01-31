@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Technologies - Anton Kireyev</title>
-    <link rel="icon" type="image/camping-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/camping-icon" href="images/favicon.ico" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Inter"
@@ -39,7 +39,7 @@
         font-family: Inter;
         color: #3b6064;
         text-align: left;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
       }
       h3 {
         font-family: Cookie;
@@ -60,18 +60,16 @@
         margin-right: 120px;
       }
       img {
+        display: block;
         float: left;
         margin: 20px;
         height: 300px;
-        padding-bottom: 10px;
+        padding-bottom: 1em;
         transition: 0.5s;
-        
-
       }
       /* I wanted the images to enlarge over hover, I learned the transition, transform(unused here), and scale properties. In addition I read about the :hover selector */
-      img:hover{
+      img:hover {
         scale: 1.5;
-        
       }
       a {
         text-decoration: none;
@@ -85,10 +83,13 @@
         background-color: #379634;
         margin-top: 5px;
       }
-      /* NOT psyched about using a div as a spacer, trying to see if there is another way to do it. Right now the issue is that the images are going into other "sections" */
+      /* NOT psyched about using a div as a spacer, trying to see if there is another way to do it. Right now the issue is that without this the images are going into other sections */
       .spacer {
         width: 100%;
-        margin-bottom: 18rem;
+        margin-bottom: 18em;
+      }
+      .hobbies-head {
+        margin-top: 18em;
       }
     </style>
   </head>
@@ -108,13 +109,14 @@
     <h2 id="about">About Me</h2>
 
     <p>
-      <img
-        src="images/myself.jpg"
-        alt="picture of myself"
-        title="my time in europe"
-      />My name is Anton Kireyev, I grew up in Newton, Massachussets. I am
-      currently a student at Babson College. I enjoy to learn new things about
-      technology.
+      <!-- I decided that I wanted to include captions on my images.-->
+      
+        <img
+          src="images/myself.jpg"
+          alt="picture of myself"
+          title="my time in europe"
+        />
+        
     </p>
 
     <p>
@@ -122,27 +124,28 @@
       <a href="https://www.babson.edu" target="_blank">Babson College</a>
       because I wanted to go to a small business school and it was also
       convenient that it was close to home. After graduation I plan to work in
-     either the analytics or IT field.
+      either the analytics or IT field.
     </p>
 
-    <div class="spacer"></div>
+    <!-- <div class="spacer"></div> -->
     <!-- MY HOBBIES SECTION-->
-    <h2 id="hobbies">My Hobbies</h2>
+    <h2 id="hobbies" class="hobbies-head">My Hobbies</h2>
+    
     <img
       src="https://cdn.akamai.steamstatic.com/steam/apps/570/capsule_616x353.jpg"
       alt="dota 2 promotional image"
       title="Dota 2"
     />
     <p>
-      During my free time I like to play video games with friends. I occsionally
-      join tournaments with a team and compete competitively. My favorite game
-      to play right now is
+      During my free time I like to play video games with friends. I
+      occasionally join tournaments with a team and compete competitively. My
+      favorite game to play right now is
       <a href="https://www.dota2.com/home" target="_blank">Dota 2</a>. I also
       like to watch sports. My favorite sport would have to be Soccer, I love to
       watch and play it.
     </p>
 
-    <div class="spacer"></div>
+    <!-- <div class="spacer"></div> -->
     <div class="horizontal-line"></div>
     <!-- CONTACT SECTION-->
     <h3 id="contact">Contact Information</h3>
