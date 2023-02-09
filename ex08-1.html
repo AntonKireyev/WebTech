@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <style>
+        table, tr, td, th{
+            border: 1px black solid
+        }
+        table{
+            border-collapse: collapse;
+            background-color:lightgray;
+            margin: auto;
+            width: 80vw;
+        }
+        tr:nth-child(even){
+            background-color: aqua;
+        }
+        tr:hover{
+            background-color: beige;
+        }
+        th, td{
+            text-align: center;
+
+        }
+        th:first-child, td:first-child{
+            width:20vw;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+          <th>Product Code</th>
+          <th>Product Description</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>001</td>
+          <td>Shirt</td>
+          <td>$15</td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>Hat</td>
+          <td>$10</td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td>Pants</td>
+            <td>$30</td>
+        </tr>
+        <caption>
+          <h2>Product Catalog</h2>
+        </caption>
+      </table>
+</body>
+</html>
