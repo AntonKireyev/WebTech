@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      * {
-        box-sizing: border-box;
-      }
       body {
         background-color: beige;
         max-width: 100%;
@@ -20,32 +17,39 @@
         width: 70%;
         margin: 0 auto;
         background-color: aliceblue;
-        height: ;
+        display: table;
       }
       #title {
         width: 100%;
+        display: table-row;
+        text-align: center;
       }
       #image {
         width: 60%;
+        display: table-cell;
       }
       #caption {
         width: 60%;
+        display: table-cell;
       }
       #info-left {
         width: 30%;
         float: left;
+        display: table-cell;
       }
       #info-middle {
         width: 30%;
-        float: left;
+        display: table-cell;
       }
       #info-right {
         width: 40%;
-        margin-left: 60%;
         float: right;
+        margin-left: 60%;
+        display: table-column;
       }
       #left-section {
         float: left;
+        display: table-column;
       }
     </style>
   </head>
