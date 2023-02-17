@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Layout: Flexbox</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .container {
+        background-color: beige;
+        /* padding: 10px; */
+        /* height: 300px; */
+        /* INTRODUCING FLEX BOX, DISPLAY: and ALIGN elements */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        /* justify-content: space-around;  -- same as space-between*/
+        /* justify-content: space-between -- items evenly distributed */
+        /* justify-content: baseline; -- ALIGNS TO LEFT
+        justify-content: right; -- ALIGNS TO RIGHT
+        */
+        align-items: center;
+
+        /* 
+        display: flex;
+        flex-direction: ;
+        flex-wrap: ;
+        flex-flow: ;
+        justify-content: ;
+        align-items: ;
+        align-content: ;
+         */
+      }
+      .item {
+        background-color: lightsalmon;
+        margin: 5px;
+        border: 3px solid black;
+        height: 150px;
+        width: 200px;
+
+        /* order: ; */
+      }
+      .item-2 {
+        height: 200px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item-1">Item 1</div>
+      <div class="item item-2">Item 2</div>
+      <div class="item item-3">Item 3</div>
+      <div class="item item-4">Item 4</div>
+    </div>
+  </body>
+</html>

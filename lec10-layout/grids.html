@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Layout: Flexbox</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .container {
+        background-color: lightblue;
+        padding: 10px;
+        display: grid;
+        /* grid-template-columns: 100px 100px 100px; */
+        /* grid-template-columns: 200px auto 100px; */
+        grid-template-columns: 1fr 2fr 3fr;
+
+        /* column-gap: 10px;
+        row-gap: 10px; */
+
+        grid-template-areas:
+        "title title title"
+        "image image side"
+        "image-caption image-caption side"
+        "main-1 main-2 side"
+      }
+      .item {
+        background-color: lightsalmon;
+        /* margin: 5px; */
+        border: 2px solid black;
+        /* height: 150px;
+        width: 200px; */
+
+        grid-area: title;
+      }
+      .item-2 {
+        height: 200px;
+
+        grid-area: image;
+      }
+      .item-3 {
+        grid-area: image-caption;
+      }
+      .item-4 {
+        /* min-width: 50%; */
+        grid-area: main-1;
+      }
+      .item-5 {
+        grid-area: main-2;
+      }
+      .item-6 {
+        grid-area: side;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item-1">Item 1</div>
+      <div class="item item-2">Item 2</div>
+      <div class="item item-3">Item 3</div>
+      <div class="item item-4">Item 4</div>
+      <div class="item item-5">Item 5</div>
+      <div class="item item-6">Item 6</div>
+    </div>
+  </body>
+</html>

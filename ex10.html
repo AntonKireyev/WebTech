@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Layout: Flexbox</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .container {
+        background-color: lightblue;
+        padding: 10px;
+        display: grid;
+        
+
+        grid-template-columns: 35% 35% 30%;
+
+        /* column-gap: 10px;
+        row-gap: 10px; */
+
+        grid-template-areas:
+          "title title title"
+          "image image side"
+          "image-caption image-caption side"
+          "main-1 main-2 side";
+      }
+      .item {
+        background-color: lightsalmon;
+        /* margin: 5px; */
+        border: 2px solid black;
+        /* height: 150px;
+        width: 200px; */
+      }
+      .item1 {
+        grid-area: title;        
+      }
+
+      .item-2 {
+        height: 200px;
+
+        grid-area: image;
+      }
+      .item-3 {
+        grid-area: image-caption;
+      }
+      .item-4 {
+        /* min-width: 50%; */
+        grid-area: main-1;
+      }
+      .item-5 {
+        grid-area: main-2;
+      }
+      .item-6 {
+        grid-area: side;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item-1">The Truth About Elephants</div>
+      <div class="item item-2"><img src="images/elephant.jpg" /></div>
+      <div class="item item-3"> Why is it so easy for them? Are they better parents? Do they just not
+        worry about every little detail? I've never known a gorilla to read
+        and study carefully seventeen books on bringing up baby gorillas. And
+        they seem to know just what to do. They never worry about spoiling
+        their little gorilla babies. They never worry about not having enough
+        time with them. Now, don't get me wrong, I'd rather be human than a
+        gorilla any day. Just imagine having to sit in a zoo. (Did you figure
+        out yet that while gorillas were on my mind, I could only find a
+        picture of an elephant?)</div>
+      <div class="item item-4">A baby elephant hanging out with its mom, aunts and greataunts, and
+        maybe even its grandmother</div>
+      <div class="item item-5">It's hard to tell what goes through a baby elephant's mind when its
+        mom is trying to put it to sleep. Do you think baby elephants wake up
+        in the middle of the night and cry? Do their moms and dads take turns
+        getting up with them to rock them back to sleep? How do you rock an
+        elephant, anyway? And what about gorillas?</div>
+      <div class="item item-6">Today in the paper there's a story about a new gorilla that was just
+        born in Franklin Park. Its mom is holding on to it just like any proud
+        human mom. And I have to wonder if they go through as much trauma as
+        that human mom when it comes to sleep, and food, and diapers, and
+        running into the street.</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Layout: Using Float</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .container {
+        background-color: beige;
+        padding: 10px;
+        height: 300px;
+      }
+      .item {
+        background-color: lightsalmon;
+        margin: 5px;
+        border: 3px solid black;
+        float: left;
+        height: 150px;
+        width: 20%;
+      }
+      .item-2 {
+        height: 200px;
+      }
+      .item-4 {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item-1">Item 1</div>
+      <div class="item item-2">Item 2</div>
+      <div class="item item-3">Item 3</div>
+      <div class="item item-4">Item 4</div>
+    </div>
+  </body>
+</html>
