@@ -31,13 +31,13 @@
       input {
         display: inline-block;
       }
-      legend{
+      legend {
         font-size: x-large;
       }
-      label{
+      label {
         width: 1500px;
       }
-      .short{
+      .short {
         width: 100px;
       }
       div {
@@ -50,14 +50,13 @@
         margin-top: 1em;
         width: 200px;
       }
-      .comments{
+      .comments {
         margin-top: 1em;
       }
       /* Unsure why, but the "name" label was off by 4 pixels? Adjusted with a class selector. */
-      .name{
+      .name {
         width: 104px;
-      } 
-
+      }
     </style>
   </head>
   <body>
@@ -67,16 +66,26 @@
         <legend><strong>Your Information:</strong></legend>
         <div>
           <label for="name" class="name">Name:</label
-          ><input id="name" name="name" type="text" placeholder="Enter your name here"/>
+          ><input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Enter your name here"
+          />
         </div>
         <div>
           <label for="email" class="short">Email:</label>
-          <input id="email" name="email" type="email" placeholder="Enter your email here"/>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Enter your email here"
+          />
         </div>
         <div>
           <label for="Country" class="short">Country:</label>
           <input list="countries" id="Country" name="Country" />
-          <datalist id="countries" name="countries">
+          <datalist id="countries">
             <option value="United States of America"></option>
             <option value="Mexico"></option>
             <option value="Canada"></option>
@@ -87,7 +96,7 @@
       <fieldset>
         <legend><strong>Your Review:</strong></legend>
         <div>
-          <label for="purchase" class="inline" class="margin-top"
+          <label for="purchase" class="inline"
             >What Apple product did you purchase?</label
           >
           <select id="purchase" name="purchase">
@@ -100,9 +109,8 @@
           </select>
         </div>
         <div>
-          <label for="thoughts" >What do you think of this product?</label>
+         What do you think of this product?
         </div>
-
         <input id="Great" type="radio" name="thoughts" />
         <label for="Great" class="inline">Great</label>
         <input id="Awesome" type="radio" name="thoughts" />
