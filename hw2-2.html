@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AirPods-2</title>
+    <style>
+      body {
+        max-width: 100%;
+        background-color: #eaecee;
+      }
+      p {
+        font-family: Helvetica;
+        text-align: center;
+      }
+      .title {
+        font-family: Helvetica;
+        text-align: center;
+        font-size: xx-large;
+      }
+      a {
+        background-color: #0077ed;
+        color: white;
+        padding: 0 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 16px;
+        max-width: 100%;
+        height: auto;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .container {
+        background-color: white;
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-auto-columns: 20% 30% 30% 10% 10%;
+        grid-template-areas:
+          "Airpods-Pro Pro-Image Pro-Description Pro-Price Pro-Buy-Button"
+          "Airpods Airpods-Image gen3-Description gen3-Price gen3-Buy-Button"
+          "Airpods Airpods-Image gen2-Description gen2-Price gen2-Buy-Button"
+          "Airpods-Max Max-Image Max-Description Max-Price Max-Buy-Button";
+      }
+
+      .item{
+        text-align: center;
+      }
+      .item-airpods-pro {
+        grid-area: Airpods-Pro;
+        align-self: center;
+      }
+      .item-pro-image {
+        grid-area: Pro-Image;
+      }
+      .item-pro-description {
+        grid-area: Pro-Description;
+        align-self: center;
+      }
+      .item-pro-price {
+        grid-area: Pro-Price;
+        align-self: center;
+      }
+      .item-pro-buy-button {
+        grid-area: Pro-Buy-Button;
+        align-self: center;
+      }
+      .item-airpods {
+        grid-area: Airpods;
+        align-self: center;
+      }
+      .item-airpods-image {
+        grid-area: Airpods-Image;
+      }
+      .item-gen3-description {
+        grid-area: gen3-Description;
+        align-self: center;
+      }
+      .item-gen3-price {
+        grid-area: gen3-Price;
+        align-self: center;
+      }
+      .item-gen3-buy-button {
+        grid-area: gen3-Buy-Button;
+        align-self: center;
+      }
+      .item-gen2-description {
+        grid-area: gen2-Description;
+        align-self: center;
+      }
+      .item-gen2-price {
+        grid-area: gen2-Price;
+        align-self: center;
+      }
+      .item-gen2-buy-button {
+        grid-area: gen2-Buy-Button;
+        align-self: center;
+      }
+      .item-airpods-max {
+        grid-area: Airpods-Max;
+        align-self: center;
+      }
+      .item-max-image {
+        grid-area: Max-Image;
+        margin-left: 3em;
+      }
+      .item-max-description {
+        grid-area: Max-Description;
+        align-self: center;
+      }
+      .item-max-price {
+        grid-area: Max-Price;
+        align-self: center;
+      }
+      .item-max-buy-button {
+        grid-area: Max-Buy-Button;
+        align-self: center;
+      }
+      .sale {
+        text-decoration: line-through;
+      }
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">AirPods</h1>
+    <div class="container">
+      <div class="item item-airpods-pro"><p>AirPods Pro</p></div>
+      <div class="item item-pro-image">
+        <img src="images/airpods-pro.jpg" alt="airpods-pro"/>
+      </div>
+      <div class="item item-pro-description">
+        <p>
+          AirPods Pro <br />
+          (2nd Generation)
+        </p>
+      </div>
+      <div class="item item-pro-price"><p>$249.00</p></div>
+      <div class="item item-pro-buy-button">
+        <a
+          href="https://www.apple.com/shop/product/MQD83AM/A/airpods-pro"
+          class="buy-button"
+          ><p>Buy</p></a
+        >
+      </div>
+      <div class="item item-airpods"><p>AirPods</p></div>
+      <div class="item item-airpods-image">
+        <img src="images/airpods.jpg" alt="airpods"/>
+      </div>
+      <div class="item item-gen3-description">
+        <p>
+          AirPods (3rd Generation) with <br />
+          Lightning Charging Case
+        </p>
+      </div>
+      <div class="item item-gen3-price"><p>$169.00</p></div>
+      <div class="item item-gen3-buy-button">
+        <a
+          href="https://www.apple.com/shop/product/MME73AM/A/airpods-3rd-generation-with-magsafe-charging-case"
+          class="buy-button"
+          ><p>Buy</p></a
+        >
+      </div>
+      <div class="item item-gen2-description">
+        <p>AirPods (2nd Generation)</p>
+      </div>
+      <div class="item item-gen2-price">
+        <p class="sale">$159.00</p>
+        <p class="red"><strong>$129.00</strong></p>
+      </div>
+      <div class="item item-gen2-buy-button">
+        <a
+          href="https://www.apple.com/shop/product/MV7N2AM/A/airpods-with-charging-case"
+          class="buy-button"
+          ><p>Buy</p></a
+        >
+      </div>
+      <div class="item item-airpods-max"><p>AirPods Max</p></div>
+      <div class="item item-max-image">
+        <img src="images/airpods-max.jpg" alt="airpods-max"/>
+      </div>
+      <div class="item item-max-description"><p>AirPods Max</p></div>
+      <div class="item item-max-price"><p>$549.00</p></div>
+      <div class="item item-max-buy-button">
+        <a
+          href="https://www.apple.com/shop/buy-airpods/airpods-max"
+          class="buy-button"
+          ><p>Buy</p></a
+        >
+      </div>
+    </div>
+  </body>
+</html>
