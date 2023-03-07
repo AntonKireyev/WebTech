@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 14</title>
+  </head>
+  <body>
+    <h1>Manipulating Images using JavaScript</h1>
+    <div>
+      <img
+        src="images/tiger1.jpg"
+        alt="Tiger 1"
+        title="Tiger is walking"
+        width="400"
+      />
+    </div>
+
+    <script>
+      function enlargeImage() {
+        console.log("function enlarge image starts...");
+        /* pseudo-code: 
+        1. Select the image we want to enlarge, assign it to a variable
+        2. get the width of the image, assign value (numerical) to another variable (w)
+        3. increase the number (w), w = w * 1.2
+        4. assign the width back to the width attribute of the image.
+        */
+
+        //         1. Select the image we want to enlarge, assign it to a variable
+
+        const image = document.querySelector("img");
+        // console.log(image);
+
+        //          2. get the width of the image, assign value (numerical) to another variable (w)
+
+        let w = image.width;
+        // console.log(image.width);
+
+        //        3. increase the number (w), w = w * 1.2
+
+        w = w * 1.2;
+        console.log(w);
+
+        //         4. assign the width back to the width attribute of the image.
+
+        image.width = w;
+
+        console.log("... function enlargeImage completes");
+      }
+
+      document.querySelector("img").addEventListener("mouseover", function () {
+        enlargeImage();
+      });
+
+      // WRITE ANOTHER FUNCTION TO REVERSE EFFECTS OF INCREASING WIDTH (DIVIDE WIDTH BY 1.2) WHEN MOUSE IS OFF.
+      function decreaseImage() {
+        //         1. Select the image we want to enlarge, assign it to a variable
+
+        const image = document.querySelector("img");
+        // console.log(image);
+
+        //          2. get the width of the image, assign value (numerical) to another variable (w)
+
+        let w = image.width;
+        // console.log(image.width);
+
+        //        3. increase the number (w), w = w * 1.2
+
+        w = w / 1.2;
+        console.log(w);
+
+        //         4. assign the width back to the width attribute of the image.
+
+        image.width = w;
+
+        console.log("... function decreaseImage completes");
+      }
+
+      document.querySelector("img").addEventListener("mouseout", function () {
+        decreaseImage();
+      });
+    </script>
+  </body>
+</html>
