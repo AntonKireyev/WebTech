@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercise 14-2 </title>
+    <title>Exercise 14-2</title>
     <style>
-      .container{
+      .container {
         display: flex;
         justify-content: center;
         align-items: center;
-
       }
     </style>
   </head>
@@ -62,9 +61,11 @@
         console.log("... function enlargeImage completes");
       }
 
-      document.querySelectorAll("img").addEventListener("mouseover", function () {
-        enlargeImage();
-      });
+      document
+        .querySelectorAll("img")
+        .addEventListener("mouseover", function () {
+          enlargeImage();
+        });
 
       // WRITE ANOTHER FUNCTION TO REVERSE EFFECTS OF INCREASING WIDTH (DIVIDE WIDTH BY 1.2) WHEN MOUSE IS OFF.
       function decreaseImage() {
@@ -90,12 +91,20 @@
         console.log("... function decreaseImage completes");
       }
 
-      document.querySelectorAll("img").addEventListener("mouseout", function () {
-        decreaseImage();
-      });
+      document
+        .querySelectorAll("img")
+        .addEventListener("mouseout", function () {
+          decreaseImage();
+        });
     </script>
 
     <!-- Tried using "arguments", "typeof", and querySelectorAll(), none seemed to work, not 
-    sure if I'm using the wrong thing or if I'm implementing it incorrectly. -->
+    sure if I'm using the wrong thing or if I'm implementing it incorrectly. 
+  
+https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
+https://www.w3schools.com/js/js_function_parameters.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
+
+-->
   </body>
 </html>
