@@ -69,7 +69,7 @@
 
       // WRITE ANOTHER FUNCTION TO REVERSE EFFECTS OF INCREASING WIDTH (DIVIDE WIDTH BY 1.2) WHEN MOUSE IS OFF.
       function decreaseImage() {
-        //         1. Select the image we want to enlarge, assign it to a variable
+        //         1. Select the image we want to unenlarge, assign it to a variable
 
         const image = document.querySelectorAll("img");
         // console.log(image);
@@ -79,7 +79,7 @@
         let w = image.width;
         // console.log(image.width);
 
-        //        3. increase the number (w), w = w * 1.2
+        //        3. decrease the number (w), w = w / 1.2
 
         w = w / 1.2;
         console.log(w);
