@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 15</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      img {
+        border: 5px ridge gold;
+        display: block;
+      }
+      div,
+      img {
+        width: 400px;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Who is your favorite Celtics Player?</h1>
+    <img
+      src="images/Celtics.png"
+      alt="Click here to choose the image"
+      title="Celtics"
+      id="Celtics"
+    />
+    <div>
+      Enter the last name of your favorite Celtics player:
+      <ul>
+        <li>Jaylen Brown</li>
+        <li>Jayson Tatum</li>
+        <li>Al Horford</li>
+        <li>Payton Pritchard</li>
+      </ul>
+    </div>
+    <script>
+      function checkPlayerName() {
+        console.log("player image function is starting");
+        // 1. Get Celtics Logo Image
+        const celtics = document.getElementById("Celtics");
+        // 2. Listen for Click
+        // 3. Prompt user with window - ask "What is their last name?"
+        let name = window.prompt("What is their last name?");
+        // 4. Get the name, if it matches one of 4 names, store it in memory. If not, display - "Sorry, that is not one of the 4 players."
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return
+
+        if (name == "Brown") {
+          // change Celtics image to jaylen-brown.png
+          console.log("Player name matches = Jaylen Brown");
+          celtics.src = "images/jaylen-brown.png"
+          return;
+        }
+        if (name == "Tatum") {
+          // change Celtics image to jayson-tatum.png
+          console.log("Player name matches = Jayson Tatum");
+          celtics.src = "images/jayson-tatum.png"
+          return;
+        }
+        if (name == "Horford") {
+          // change Celtics image to al-horford.png
+          console.log("Player name matches = Al Horford");
+          celtics.src = "images/al-horford.png"
+          return;
+        }
+        if (name == "Pritchard") {
+          // change Celtics image to payton-pritchard.png
+          console.log("Player name matches = Payton Pritchard");
+          celtics.src = "images/payton-pritchard.png"
+          return;
+        } else {
+          window.alert("Sorry, that is not one of the 4 players.");
+          celtics.src = "images/celtics.png"
+        }
+      }
+// execute function on click of the celtics image.
+      document.getElementById("Celtics").onclick = function () {
+        checkPlayerName();
+      };
+
+      // Used help from chat.gpt to figure out how to switch src value for images.
+
+// using javascript, how can I replace one image with another when it is clicked
+// You can replace one image with another when it is clicked using JavaScript by adding a click event listener to the image and changing its src attribute. Here's an example code:
+
+// HTML:
+// <img src="first-image.jpg" alt="First Image" id="image-1">
+
+// JavaScript:
+// // Select the image element using its ID
+// const image1 = document.getElementById('image-1');
+
+// // Add a click event listener to the image
+// image1.addEventListener('click', function() {
+//   // Change the src attribute of the image to the path of the second image
+//   image1.src = 'second-image.jpg';
+// });
+
+// In this code, we first select the image element using its ID image-1 and store it in a variable called image1. We then add a click event listener to the image using the addEventListener method. Inside the event listener function, we change the src attribute of the image to the path of the second image (second-image.jpg).
+
+// When the user clicks on the image, the event listener function is called and the src attribute of the image is changed, effectively replacing the first image with the second one.
+
+    </script>
+  </body>
+</html>
