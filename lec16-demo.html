@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This is a demo</title>
+  </head>
+  <body>
+    <form action="">
+      <p id="demo">This is a demo</p>
+      <p id="demo2">This is a demo</p>
+      <div>x = <input type="text" name="x" id="x-input" /></div>
+      <div>y = <input type="text" name="y" id="y-input" /></div>
+      <button type="button">click</button>
+      <!-- Add Type = "button" to prevent the page from refreshing because without it the button is a submit button by default-->
+    </form>
+
+    <script>
+      function textswap() {
+        // change the text of the p#demo
+        console.log("...starting function textswap");
+        const demoEl = document.getElementById("demo");
+        demoEl.innerHTML = "Hello!";
+
+        //change the target property
+        demoEl.style.color = "red";
+        demoEL.style.backgroundColor = "blue";
+      }
+
+      function calculate() {
+        // calculate the square of the input number, show the result in the first paragraph (p# demo).
+        console.log("...starting function calculate");
+        const xInput = document.getElementById("x-input");
+        const xValue = xInput.value;
+        const yInput = document.getElementById("y-input");
+        const yValue = yInput.value;
+
+        const result = parseFloat(xValue) + parseFloat(yValue);
+        // const result = xValue ** 2;
+        const demoEl = document.getElementById("demo");
+        demoEl.textContent = result;
+
+        const userResult = window.prompt("What is x + y?");
+        const demo2El = document.getElementById("demo2");
+
+        if (parseFloat(userResult) == result) {
+          demo2El.textContent = "Good Job";
+        } else {
+          demo2El.textContent = "Study more!";
+        }
+      }
+      document.querySelector("button").addEventListener("click", function () {
+        // textswap();
+        calculate();
+      });
+    </script>
+  </body>
+</html>
