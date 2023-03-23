@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 16</title>
+    <style>
+      body {
+        max-width: 100%;
+        margin: auto;
+        background-color: powderblue;
+      }
+      .form {
+        border: 1px black solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        text-align: center;
+      }
+      .content {
+        margin: auto;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Calculate!</h1>
+      <p>Enter two numbers and the function you would like to occur</p>
+      <div class="form">
+        <form action="post">
+          <div>1st number = <input type="text" name="x" id="x-input" /></div>
+          <div>2nd number = <input type="text" name="y" id="y-input" /></div>
+          <div class="buttons">
+            <button id="add">+</button>
+            <button id="subtract">-</button>
+            <button id="multiply">*</button>
+            <button id="divide">/</button>
+          </div>
+          <button id="calculate">Calculate!</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      function calculate(){
+          console.log('... calculating')
+          // 1. Take the values of X and Y (1st and 2nd Inputs)
+
+          let xInput = parseFloat(document.getElementById('x-input'));
+          let yInput = parseFloat(document.getElementById('y-input'));
+
+          // 2. Determine which button / function was selected
+
+          let add = document.getElementById('add');
+          let subtract = document.getElementById('subtract');
+          let multiply = document.getElementById('multiply');
+          let divide = document.getElementById('divide');
+
+          // 3. Perform the chosen operation between the 1st and second number.
+
+          if
+          // 4. Post the result by changing the "result" text.
+      }
+      document.getElementById("calculate").addEventListener("click", function () {
+        calculate();
+      });
+    </script>
+  </body>
+</html>
