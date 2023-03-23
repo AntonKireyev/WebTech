@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Quiz 3 - Question 1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1.2rem;
+      }
+
+      h1 {
+        padding: 20px;
+        text-align: center;
+        background-color: #333333;
+        color: #f4f4f4;
+      }
+
+      div {
+        width: 80%;
+        margin: 10px auto;
+      }
+
+      li {
+        margin: 10px;
+      }
+
+      button {
+        border: none;
+        padding: 5px 10px;
+        text-align: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 3px;
+        background-color: #333333;
+        color: #f4f4f4;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Quiz 3 - Question 1</h1>
+    <div>
+      <p>Use internal JavaScript to implement the features below:</p>
+      <ul>
+        <li>
+          When you click the DARK button, the background color of
+          <code>h1</code> changes to black and the color of text changes to
+          white.
+        </li>
+        <li>
+          When you click the LIGHT button, the background color of
+          <code>h1</code> changes to lightgray and the color of text changes to
+          black.
+        </li>
+        <li>
+          (Optional) Change other elements in the page according to the selected
+          color scheme and/or highlight the selected button.
+        </li>
+      </ul>
+      <div>
+        Color Scheme:
+        <button id="dark-btn">DARK</button>
+        <button id="light-btn">LIGHT</button>
+      </div>
+    </div>
+    <script>
+      function makeDark() {
+        console.log("...starting dark function");
+        // QUERY SELECTOR WAS NOT WORKING HERE< CHANGED TO GET ELEMENT BY ID. https://stackoverflow.com/questions/19235345/javascript-typeerror-cannot-read-property-style-of-null
+        const dark = document.getElementById("heading");
+        dark.style.backgroundColor = "black";
+        dark.style.color = "white";
+      }
+      function makeLight() {
+        console.log("...starting light function");
+        const light = document.getElementById("heading");
+        light.style.backgroundColor = "lightgray";
+        light.style.color = "black";
+      }
+
+      document
+        .getElementById("dark-btn")
+        .addEventListener("click", function () {
+          makeDark();
+        });
+      document
+        .getElementById("light-btn")
+        .addEventListener("click", function () {
+          makeLight();
+        });
+    </script>
+  </body>
+</html>

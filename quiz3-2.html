@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Quiz 3 - Question 2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1.2rem;
+      }
+
+      h1 {
+        padding: 20px;
+        text-align: center;
+        background-color: #333333;
+        color: #f4f4f4;
+      }
+
+      div {
+        width: 80%;
+        margin: 10px auto;
+      }
+
+      li {
+        margin: 10px;
+      }
+
+      button {
+        border: none;
+        padding: 5px 10px;
+        text-align: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 3px;
+        background-color: #333333;
+        color: #f4f4f4;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Quiz 3 - Question 2</h1>
+    <div>
+      <p>Use internal JavaScript to implement the features below:</p>
+      <ul>
+        <li>
+          When you enter an integer (e.g. 2023) that is a multiple of 7 and
+          click the button, the text below the button shows "2023 is a multiple
+          of 7.".
+        </li>
+        <li>
+          When you enter an integer (e.g. 2024) that is not a multiple of 7 and
+          click the button, the text below the button shows "2024 isn't a
+          multiple of 7.".
+        </li>
+        <li>You don't need to validate the input.</li>
+        <li>
+          (Optional) In addition to above requirements, show the number is an
+          even/odd number.
+        </li>
+      </ul>
+      <div>
+        <form action="" id="form">
+          <div>
+            <label>
+              Number:
+              <input maxlength="30" name="number" type="text" id="num"
+            /></label>
+            <button type="button" id="check-btn">Check</button>
+          </div>
+        </form>
+        <div id="result">Here shows the result.</div>
+      </div>
+    </div>
+    <script>
+      function check() {
+        let number = parseFloat(document.getElementById("num"));
+        let result = document.getElementById("result");
+        let figure = parseFloat(number) % 7;
+
+        if (figure== 0) {
+          result.innerHTML = `Your number is a multiple of 7`;
+        } else {
+          result.innerHTML = `Your number is not a multiple of 7`;
+        }
+      }
+      document
+        .getElementById("check-btn")
+        .addEventListener("click", function () {
+          check();
+        });
+    </script>
+  </body>
+</html>

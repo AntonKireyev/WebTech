@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lec17</title>
+  </head>
+  <body>
+    <p id="demo">This is a demonstration</p>
+    <button id = 'button'> Button! </button>
+    <script>
+      function change() {
+        console.log('... starting to change')
+        const text = document.getElementById("demo");
+        // Changing the property
+        // text.style.fontSize = "30px";
+        // text.style.border = "1px solid red";
+        text.style.display = "none"
+
+
+        // Given minutes, turn it into hours and minutes.
+        let N = 150;
+        let hours = parseInt(N/60)
+        let minutes = N % 60
+
+      }
+      document.getElementById("button").addEventListener("click", function () {
+        change();
+      });
+    </script>
+  </body>
+</html>
