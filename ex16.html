@@ -30,42 +30,86 @@
       <h1>Calculate!</h1>
       <p>Enter two numbers and the function you would like to occur</p>
       <div class="form">
-        <form action="post">
+        <form action="" id="calculator">
           <div>1st number = <input type="text" name="x" id="x-input" /></div>
           <div>2nd number = <input type="text" name="y" id="y-input" /></div>
           <div class="buttons">
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-            <button id="multiply">*</button>
-            <button id="divide">/</button>
+            <label for="add">Add</label
+            ><input id="add" name="operation" type="radio" value="add" />
+            <label for="subtract">Subtract</label
+            ><input
+              id="subtract"
+              name="operation"
+              type="radio"
+              value="subtract"
+            />
+            <label for="multiply">Multiply</label
+            ><input
+              id="multiply"
+              name="operation"
+              type="radio"
+              value="multiply"
+            />
+            <label for="divide">divide</label
+            ><input id="divide" name="operation" type="radio" value="divide" />
           </div>
           <button id="calculate">Calculate!</button>
+          <p id="display">Result</p>
         </form>
       </div>
     </div>
     <script>
-      function calculate(){
-          console.log('... calculating')
-          // 1. Take the values of X and Y (1st and 2nd Inputs)
+      function calculate() {
+        console.log("... calculating");
+        // 1. Take the values of X and Y (1st and 2nd Inputs)
 
-          let xInput = parseFloat(document.getElementById('x-input'));
-          let yInput = parseFloat(document.getElementById('y-input'));
+        let xInput = parseFloat(document.getElementById("x-input"));
+        let yInput = parseFloat(document.getElementById("y-input"));
+        const display = document.getElementById("display");
+        console.log("...determining variables...");
 
-          // 2. Determine which button / function was selected
+        // 2. Determine which button / function was selected
 
-          let add = document.getElementById('add');
-          let subtract = document.getElementById('subtract');
-          let multiply = document.getElementById('multiply');
-          let divide = document.getElementById('divide');
+        let operation = document.getElementById("operation");
+        console.log("...determining operation...");
 
-          // 3. Perform the chosen operation between the 1st and second number.
+        // 3. Perform the chosen operation between the 1st and second number.
 
-          if
-          // 4. Post the result by changing the "result" text.
+        if ((operation = "add")) {
+          let result = xInput + yInput;
+        } else if ((operation = "subtract")) {
+          let result = xInput - yInput;
+        } else if ((operation = "multiply")) {
+          let result = xInput * yInput;
+        } else if ((operation = "divide")) {
+          let result = xInput / yInput;
+        }
+        console.log(..."thinking...");
+        // 4. Post the result by changing the "result" text.
+        console.log(`the number is ${result}`);
+        display.innerHTML = `the number is ${result}`;
+        window.alert = `the number is ${result}`;
+
+        // 5. STOP PAGE REFRESH -- FOUND SOLUTION ONLINE -- https://www.tutorialspoint.com/how-to-stop-refreshing-the-page-on-submit-in-javascript#:~:text=Using%20%E2%80%9Creturn%20false%E2%80%9D%20to%20stop%20page%20refresh%20on%20form%20submit&text=The%20%E2%80%9Creturn%20false%E2%80%9D%20cancels%20the%20page%20refresh.
+
+        // //Get form element
+        // const form = document.getElementById("calculator");
+        // function submitForm(event) {
+        //   //Preventing page refresh
+        //   event.preventDefault();
+        // }
+
+        // //Calling a function during form submission.
+        // form.addEventListener("submit", submitForm);
+        //
+        // //Doesn't seem to work!
       }
-      document.getElementById("calculate").addEventListener("click", function () {
-        calculate();
-      });
+      document
+        .getElementById("calculate")
+        .addEventListener("click", function () {
+          calculate();
+          //submitForm();
+        });
     </script>
   </body>
 </html>
