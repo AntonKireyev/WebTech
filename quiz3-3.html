@@ -85,30 +85,42 @@
     </div>
   </body>
   <script>
+    const heading = document.getElementById("heading");
+    const tatum = document.getElementById("tatum");
+    const brown = document.getElementById("brown");
+    const bird = document.getElementById("bird");
+    const baseURL =
+      "https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/";
+
     function mouseover() {
-        console.log('...starting mouseover');
-      const tatum = document.getElementById("tatum");
+      console.log("...starting mouseover");
       // switch the image
-      tatum.src =
-        "https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/tatum2.webp";
+      tatum.src = baseURL + "tatum2.webp";
       // switch the heading
-      const heading = document.getElementById("heading");
       heading.innerHTML = "<em>&lt;Jayson Tatum's&gt;</em>'s Jersey";
     }
-    function mouseout() {}
-    console.log('...starting mouseout');
-      const tatum = document.getElementById("tatum");
-      // switch the image
-      tatum.src =
-        "https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/tatum1.webp";
-      // switch the heading
-      const heading = document.getElementById("heading");
-      heading.innerHTML = "<em>&lt;Jayson Tatum's&gt;</em>'s Jersey";
+    function mouseout() {
+    console.log("...starting mouseout");
+    // switch the image
+    tatum.src = baseURL + "tatum1.webp";
+    // switch the heading
+    heading.innerHTML = "Quiz 3 - Question 3";
+    }
 
-    document.getElementById("tatum").addEventListener("mouseover", function () {
+    // How to add multiple variables to one event listener? Solution: https://stackoverflow.com/questions/49140978/passing-multiple-variables-to-an-event-listener
+    // W3schools: https://www.w3schools.com/jsref/jsref_foreach.asp
+  
+
+    // [tatum, brown, bird].forEach(().
+    // element.addEventListener('mouseover', function)){
+    //   mouseover(); 
+    // };
+
+
+    tatum.addEventListener("mouseover", function () {
       mouseover();
     });
-    document.getElementById("tatum").addEventListener("mouseout", function () {
+    tatum.addEventListener("mouseout", function () {
       mouseout();
     });
   </script>

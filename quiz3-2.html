@@ -78,15 +78,19 @@
       </div>
     </div>
     <script>
+      const number = document.getElementById("num");
+      const result = document.getElementById("result");
       function check() {
-        let number = parseFloat(document.getElementById("num"));
-        let result = document.getElementById("result");
-        let figure = parseFloat(number) % 7;
-
-        if (figure== 0) {
-          result.innerHTML = `Your number is a multiple of 7`;
+        // let number = parseInt(document.getElementById("num").value); -- moved.
+        // console.log(`${number}`);
+        // let result = document.getElementById("result"); -- moved.
+        // let figure = parseInt(number % 7); -- combined with if/else
+        // console.log(`${figure}`);
+        const userValue = number.value;
+        if (userValue% 7 === 0) {
+          result.innerHTML = `${userValue} is a multiple of 7`;
         } else {
-          result.innerHTML = `Your number is not a multiple of 7`;
+          result.innerHTML = `${userValue} is not a multiple of 7`;
         }
       }
       document

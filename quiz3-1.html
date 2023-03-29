@@ -41,6 +41,14 @@
         background-color: #333333;
         color: #f4f4f4;
       }
+      .dark{
+        background-color: black;
+        color: white;
+      }
+      .light{
+        background-color: lightgray;
+        color: black;
+      }
     </style>
   </head>
   <body>
@@ -70,20 +78,39 @@
       </div>
     </div>
     <script>
+      const heading = document.getElementById("heading");
+      const darkBtn = document.querySelector("#dark-btn");
+      const lightBtn = document.querySelector("#light-btn");
       function makeDark() {
         console.log("...starting dark function");
         // QUERY SELECTOR WAS NOT WORKING HERE< CHANGED TO GET ELEMENT BY ID. https://stackoverflow.com/questions/19235345/javascript-typeerror-cannot-read-property-style-of-null
-        const dark = document.getElementById("heading");
-        dark.style.backgroundColor = "black";
-        dark.style.color = "white";
+        // const dark = document.querySelector("#heading");
+        // const darkBtn = document.querySelector("#dark-btn")
+        // dark.style.backgroundColor = "black";
+        // dark.style.color = "white";
+        // darkBtn.style.backgroundColor = "black";
+        // darkBtn.style.color = "white";
+        heading.classList.add('dark');
+        heading.classList.remove('light');
+        darkBtn.classList.add('dark');
+        darkBtn.classlist.remove('light');
+        lightBtn.classlist.remove('light');
       }
       function makeLight() {
         console.log("...starting light function");
-        const light = document.getElementById("heading");
-        light.style.backgroundColor = "lightgray";
-        light.style.color = "black";
-      }
+        // const light = document.querySelector("#heading");
+        // const lightBtn = document.querySelector("#light-btn");
+        // light.style.backgroundColor = "lightgray";
+        // light.style.color = "black";
+        // lightBtn.style.backgroundColor = "lightgray";
+        // lightBtn.style.color = "black";
+        heading.classList.add('light');
+        heading.classlist.remove('dark');
+        lightBtn.classList.add('light');
+        lightBtn.classlist.remove('dark');
+        darkBtn.classlist.remove('dark');
 
+      }
       document
         .getElementById("dark-btn")
         .addEventListener("click", function () {
