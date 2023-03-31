@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for=""><input type="radio" name="colors" value="red" />Red</label
+      ><label for=""
+        ><input type="radio" name="colors" value="blue" />Blue</label
+      ><label for=""
+        ><input type="radio" name="colors" value="yellow" />Yellow</label
+      ><label for=""
+        ><input type="radio" name="colors" value="green" />Green</label
+      >
+      Please select your favorite magazines
+
+      <input type="checkbox" name="mags" value="The New Yorker" />
+      <input type="checkbox" name="mags" value="WIRED" />
+      <input type="checkbox" name="mags" value="National Geographic" />
+      <input type="checkbox" name="mags" value="Sports Illustrated" />
+
+      <button type="button" id="change-btn"></button>
+    </form>
+    <script>
+      const colors = document.querySelectorAll("input[name='colors']");
+      const mags = document.querySelectorAll("input[name='mags']");
+      function change() {
+        let userChoice;
+
+        for (let i = 0; i < colors.length; i++) {
+          const color = colors[i];
+
+          if (color.checked) {
+            userChoice = color.value;
+          }
+        }
+        document.querySelector("body").style.backgroundColor = userChoice;
+      }
+      function selectMags() {
+        let mags;
+
+        for (let i = 0; i < mags.length; i++) {
+          const mags = mags[i];
+          if (color.checked) {
+            magChoice += mags.value;
+          }
+        }
+      }
+      document
+        .querySelector("#change-btn")
+        .addEventListener("click", function () {
+          change();
+          selectMags();
+        });
+    </script>
+  </body>
+</html>

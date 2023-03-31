@@ -27,19 +27,19 @@
     <form action="" method="post">
       <div>
         <label
-          >Enter your name: <input name="name" type="text" size="20"
+          >Enter your name: <input name="name" type="text" size="20" id="name"
         /></label>
       </div>
       <div>
         <label>
           Enter your age :
-          <input name="age" size="4" type="text" />
+          <input name="age" size="4" type="text" id="age" />
         </label>
       </div>
       <div>
         <label>
           Select your gender:
-          <select name="gender">
+          <select name="gender" id="gender">
             <option value="Woman">Female</option>
             <option value="Man">Male</option>
           </select>
@@ -48,7 +48,13 @@
       <div>
         <label
           >Your information will appear here: <br />
-          <textarea cols="40" name="result" rows="4" readonly></textarea>
+          <textarea
+            cols="40"
+            name="result"
+            rows="4"
+            readonly
+            id="display"
+          ></textarea>
         </label>
       </div>
       <!-- <div>
@@ -64,15 +70,38 @@
     </form>
     <script>
       const submit = document.querySelector("#submit");
+      const display = document.querySelector("#display");
+
       // when user clicks button...
       // capture the user inputs from the text fields and dropdown list
-      function validator(){
-    const 
-}
-      // display all the inputs in textarea
-      // check to make sure that the user has entered something in the text fields
-      // check to make sure that the age value is a numerical value
+      function validator() {
+        const name = document.querySelector("#name").value;
+        const age = document.querySelector("#age").value;
+        const gender = document.querySelector("#gender").value;
+        console.log("... starting validator");
 
+        // check to make sure that the user has entered something in the text fields (using isNaN)
+        if (name.length == 0) {
+          alert("Please enter a valid name");
+          return;
+        }
+
+        // check to make sure that the age value is a numerical value
+        if (isNaN(age)) {
+          alert("Please enter a valid age");
+          return;
+        }
+
+        // display all the inputs in textarea
+        console.log(`${name}`); // debug
+        console.log(`${age}`);
+        console.log(`${gender}`);
+
+        // I asked chat GPT how to split it into different lines, I also googled it
+        // and found this: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings#:~:text=To%20have%20the%20equivalent%20output%20using%20a%20normal%20string%20you%27d%20have%20to%20include%20line%20break%20characters%20(%5Cn)%20in%20the%20string%3A
+
+        display.innerHTML = `${name}\n${age}\n${gender}`;
+      }
       submit.addEventListener("click", function () {
         validator();
       });

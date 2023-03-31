@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for=""><input type="radio" name="colors" value="red" />Red</label
+      ><label for=""
+        ><input type="radio" name="colors" value="blue" />Blue</label
+      ><label for=""
+        ><input type="radio" name="colors" value="yellow" />Yellow</label
+      ><label for=""
+        ><input type="radio" name="colors" value="green" />Green</label
+      >
+      <button type="button" id="change-btn"></button>
+    </form>
+    <script>
+      const colors = document.querySelectorAll("input[name='colors']");
+      function change() {
+        let userChoice;
+
+        for (let i = 0; i < colors.length; i++) {
+          const color = colors[i];
+
+          if (color.checked) {
+            userChoice = color.value;
+          }
+        }
+        document.querySelector("body").style.backgroundColor = userChoice;
+      }
+      document
+        .querySelector("#change-btn")
+        .addEventListener("click", function () {
+          change();
+        });
+    </script>
+  </body>
+</html>
