@@ -75,8 +75,9 @@
 
         for (let i = 0; i < mags.length; i++) {
           const mags = mags[i];
+          
           if (mags.checked) {
-            magChoice += mags.value;
+            mags += mags.value;
           }
           display.innerHTML = `${magChoice}`;
         }

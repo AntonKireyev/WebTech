@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array and for loops</title>
+  </head>
+  <body>
+    <h1>Array and for loops</h1>
+    <p>Display integers from 0 to 10</p>
+    <button>click</button>
+
+    <p id="result">?</p>
+
+    <script>
+      const resultEl = document.querySelector("#result");
+
+      function calc() {
+        // sum of squares of the numbers of 0-11
+        let result = 0;
+        for (let i = 0; i < 11; i++) {
+          if (i % 2 === 0) {
+            result += i ** 2;
+            console.log(i);
+          }
+          console.log("");
+        }
+
+        resultEl.innerText = result;
+      }
+
+      function calc2() {
+        const names = [ 'Alex', 'Gary', 'Sam', 'Anton'];
+
+        let line = '';
+        for (let i = 0; i < names.length; i++){
+
+            // this shows all names
+            const name = names[i]
+
+            const grade = Math.floor(Math.random()*40) + 60;
+            line = `${name}: ${grade} <br>`;
+            resultEL.innerHTML += line;
+            
+        }
+      }
+
+      document.querySelector("button").addEventListener("click", function () {
+        // calc();
+        calc2();
+      });
+    </script>
+  </body>
+</html>
