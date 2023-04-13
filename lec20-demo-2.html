@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array and for loops</title>
+  </head>
+  <body>
+    <h1>Array and for loops</h1>
+    <p>Calculate the sum of even numbers from 1 to 10</p>
+    <button>Click</button>
+    <p id="result"></p>
+    <script>
+      function calc() {
+        const resultEl = document.querySelector("#result");
+        let result = 0;
+        console.log("Initial sum:", result);
+        for (let i = 1; i < 11; i++) {
+          console.log("Iteration " + i + ":");
+          if (i % 2 === 0) {
+            // console.log(` ${i} is an odd number`);
+            result += i;
+            console.log(` after adding ${i}, the result is ${result}`);
+          }
+          console.log("");
+        }
+        resultEl.innerText = result;
+      }
+
+      function calc2() {
+        const names = [
+          "Alex",
+          "Gerry",
+          "Gaven",
+          "Hugo",
+          "Christina",
+          "Jorge",
+          "Justin",
+          "Joseph",
+          "Jacob",
+          "Louis",
+          "Tierney",
+          "Muhamad",
+          "Molly",
+          "Justin",
+          "Anton",
+          "Samuel",
+          "Daniel",
+          "Colby",
+          "Bambi",
+          "Arundati",
+          "Ankit",
+          "Sandy",
+          "Jose",
+          "Jason",
+          "Thomas",
+          "Anna",
+          "Jiaying",
+          "Jane",
+          "Max",
+          "Yu",
+          "Yudai",
+          "Patrick",
+          "Hannah",
+        ];
+        const resultEl = document.querySelector("#result");
+        resultEl.innerHTML = "";
+        let line = "";
+
+        // 1st approach: Traditional
+        // for (let i = 0; i < names.length; i++) {
+        //   const name = names[i];
+        //   //   console.log(name);
+        //   const grade = Math.floor(Math.random() * 40) + 60;
+        //   line = `${name}: ${grade}<br>`;
+        //   resultEl.innerHTML += line;
+        // }
+
+        // 2nd approach. for..of
+        for (const name of names) {
+          const grade = Math.floor(Math.random() * 40) + 60;
+          line = `${name}: ${grade}<br>`;
+          resultEl.innerHTML += line;
+        }
+
+        // 3rd approach.
+        names.forEach((name) => {
+          const grade = Math.floor(Math.random() * 40) + 60;
+          line = `${name}: ${grade}<br>`;
+          resultEl.innerHTML += line;
+        });
+      }
+
+      document.querySelector("button").addEventListener("click", function () {
+        // calc();
+        calc2();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("https://images.unsplash.com/photo-1681151581256-43a3768d3168");
+      }
+      #clock {
+        font-size: 5em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"><div id="clock">09:00:00</div></div>
+
+    <script>
+      function showTime() {
+        const now = new Date();
+
+        // get hr, min, sec
+        const hour = formatTime(now.getHours());
+        const minute = formatTime(now.getMinutes());
+        const second = formatTime(now.getSeconds());
+
+        // display the time
+        const clock = document.querySelector("#clock");
+
+        clock.textContent = `${hour}:${minute}:${second}`;
+        // updating the time, using setTimeout to call showTime after one second
+        setTimeout(showTime, 1000);
+      }
+      function formatTime(number) {
+        if (number < 10) {
+          return "0" + number;
+        } else {
+          return number.toString();
+        }
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        showTime();
+      });
+    </script>
+  </body>
+</html>

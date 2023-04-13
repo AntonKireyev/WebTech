@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeout demo</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <button>Click</button>
+  </body>
+  <script>
+    let number = 5;
+    function countDown() {
+      console.log("... starting function countDown");
+
+      const resultEl = document.getElementById("result");
+      //   let number = 5;
+
+      //display the number
+      if (number > 0) {
+        resultEl.textContent = number;
+        number--;
+        setTimeout(countDown, 1000);
+      }
+      else{
+        resultEl.textContent = "LIFT OFF";
+        
+      }
+    }
+    document.querySelector("button").addEventListener("click", function () {
+      countDown();
+    });
+  </script>
+</html>

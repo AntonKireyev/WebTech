@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced For Demo</title>
+  </head>
+  <body>
+    <h1 class="red">Demo</h1>
+    <h3 class="red">Subtitle</h3>
+
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci, id?
+    </p>
+    <p class="red">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit facilis at
+      accusantium est quod, aut harum explicabo maxime placeat pariatur?
+    </p>
+
+    <button>click</button>
+
+    <script>
+                 function change() {
+                  // change all the elements with class name RED to red color
+                  console.log("...starting function...");
+                 // create array with red
+                  console.log("... creating array...");
+                  const targets = document.getElementsByClassName("red");
+                  console.log(targets);
+                 const targetsArray = Array.from(targets);
+                  console.log("... changing color");
+
+                  // 1st approach: traditional for loop
+                 for (let i = 0; i < targets.length; i++) {
+                      targets[i].style.color = "red";
+                  }
+
+                   // 2nd approach: for .. of
+                   for (const targetEl of targets){
+                       targetEl[i].style.color = "red";
+            }
+                  // 3rd approach: forEach
+
+                  targetsArray.forEach(Target.targetEl => {
+                   targetEl.style.color = 'red';
+                  });
+
+              }
+
+      document.querySelector("button").addEventListener("click", function () {
+      change();
+          });
+    </script>
+  </body>
+</html>

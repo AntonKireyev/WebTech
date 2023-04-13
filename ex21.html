@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SlideShow</title>
+  </head>
+  <body>
+    <img src="" alt="" id="slideshow" />
+    <p id="caption"></p>
+  </body>
+  <script>
+    const slides = [
+      "images/beaver.jpg",
+      "images/Celtics.png",
+      "images/elephant.jpg",
+      "images/tiger1.jpg",
+      "images/bodegacat.png",
+    ];
+    const colors  = ["red", "orange", "yellow", "green", "blue"];
+    const caption = ["Babson Beaver", "Go Celtics!", "Elephant :)", "Big Tiger!", "Cat in a shop"]
+    let index = 0;
+    const imgEl = document.getElementById("slideshow");
+    const captionEl = document.getElementById("caption");
+    function slideshow() {
+      if (index == slides.length) {
+        index = 0;
+      }
+      imgEl.src = slides[index];
+      imgEl.style.border = `${colors[index]} solid 5px`;
+      captionEl.textContent = caption[index];
+      index++;
+      setTimeout(slideshow, 2000);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      slideshow();
+    });
+  </script>
+</html>
