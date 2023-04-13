@@ -27,8 +27,11 @@
       if (index == slides.length) {
         index = 0;
       }
+      // Change the slide
       imgEl.src = slides[index];
+      // Change the border
       imgEl.style.border = `${colors[index]} solid 5px`;
+      // Change the text content of the caption
       captionEl.textContent = caption[index];
       index++;
       setTimeout(slideshow, 2000);
