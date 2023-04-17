@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="diceText">Dice Value:</p>
+    <button id="diceRoll">Roll the dice!</button>
+
+    <div>
+      <label for="nValue">Number of dice:</label>
+      <input type="number" id="nValue" name="nValue" />
+    </div>
+    <p id="sumText">Sum of N dice:</p>
+    <p id="avgText">Average of N dice:</p>
+    <button id="numdiceRoll">Roll the dice!</button>
+    <script>
+      const diceText = document.getElementById("diceText");
+      const diceRoll = document.getElementById("diceRoll");
+
+      function roll() {
+        // get random value from 1-6 and
+        let diceValue = Math.floor(1 + Math.random() * 6);
+        console.log(`${diceValue}`);
+        // print value
+        diceText.innerHTML = `Dice Value: <strong> ${diceValue} </strong>`;
+        // make function repeat every X number of seconds
+        setTimeout(roll, 2000);
+      }
+
+      diceRoll.addEventListener("click", function () {
+        roll();
+      });
+
+      const sumText = document.getElementById("sumText");
+      const avgText = document.getElementById("avgText");
+      const numdiceRoll = document.getElementById("numdiceRoll");
+      function rollN() {
+        let numDice = parseInt(document.getElementById("nValue").value);
+        console.log(`${numDice}`);
+        let sum = 0;
+        for (let i = 0; i < numDice; i++) {
+          let diceValue = Math.floor(1 + Math.random() * 6);
+          sum += diceValue;
+        }
+        let avg = sum / numDice;
+        console.log(`The sum: ${sum}`);
+        console.log(`The average: ${avg}`);
+        sumText.innerHTML = `Sum of ${numDice} dice: <strong> ${sum} </strong>`;
+        avgText.innerHTML = `Average of ${numDice} dice: <strong> ${avg} </strong>`;
+      }
+
+      numdiceRoll.addEventListener("click", function () {
+        rollN();
+      });
+    </script>
+  </body>
+</html>
