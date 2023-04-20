@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz 4-3</title>
+  </head>
+  <body>
+    <h1 id="header">Go Celtics!</h1>
+    <img id="tatum" src="images/tatum1.webp" alt="Jayson Tatum's Jersey" />
+    <img id="brown" src="images/brown1.webp" alt="Jaylen Brown'sJersey" />
+    <img id="bird" src="images/bird1.webp" alt="Larry Bird's Jersey" />
+    <img id="garnett" src="images/garnett1.webp" alt="Kevin Garnett's Jersey" />
+
+    <script>
+      // Instructions //
+      // Currently the page displays four jersey images for Jayson Tatum, Jaylen Brown, Larry Bird, and Kevin Garnett.
+      // The image urls for the jerseys are as follows:
+      // Front side: Images/<lastname>1.webp (where <lastname> should be replaced wiht the respective player's last name.)
+      // Back side: images/<lastname>2.webp
+      // When a user mouses over one of the jerseys the jersey image should change to to the back side of that jersey using the appropriate image url, and the heading (h1) should change to "<Full Name>'s Jersey"  (without quotes) where <Full Name> should be replaced with the resepctive player's full name.
+      // When a user mouses-out on one of the jersey's the jersey image should revert back to to the front side of the jersey using the appropriate image URL, and th heading should change to "Lets go celtics".
+      // Use of for loops is required, create up to 2 functions to achieve the results.
+      // end of instructions//
+
+      // my comments
+      // Solution created with help of GPT.
+      // Main concepts: The images array now has containers for each important part of the image
+      // Created two functions, one with mouseout and one for mouseover. Each is triggered by the respective event.
+      // These functions call the jerseys[i] value and pull the correct image src and name from the object.
+
+      // This code was edited by me to fit my coding style, the only thing that is new is the use of objects here. Another thing I don't quite understand is how the code can detect WHICH jersey is being moused over,
+      // I'm guessing this is due to the for loop.
+
+      // For some reason the images do not show when I launch the page, however it does switch when hovered and revert back when not hovering.
+
+      const header = document.querySelector("#header");
+      const jerseys = [
+        {
+          id: "tatum",
+          name: "Jayson Tatum",
+          front: "images/tatum1.webp",
+          back: "images/tatum2.webp",
+        },
+        {
+          id: "brown",
+          name: "Jaylen Brown",
+          front: "images/brown1.webp",
+          back: "images/brown2.webp",
+        },
+        {
+          id: "bird",
+          name: "Larry Bird",
+          front: "images/bird1.webp",
+          back: "images/bird2.webp",
+        },
+        {
+          id: "garnett",
+          name: "Kevin Garnett",
+          front: "images/garnett1.webp",
+          back: "images/garnett2.webp",
+        },
+      ];
+
+      for (let i = 0; i < jerseys.length; i++) {
+        const jersey = jerseys[i];
+        const img = document.querySelector(`#${jersey.id}`);
+
+        function mouseover() {
+          img.setAttribute("src", jersey.back);
+          header.textContent = `${jersey.name}'s Jersey`;
+        }
+
+        function mouseout() {
+          img.setAttribute("src", jersey.front);
+          header.textContent = "Let's go Celtics!";
+        }
+
+        img.addEventListener("mouseover", function () {
+          mouseover();
+        });
+
+        img.addEventListener("mouseout", function () {
+          mouseout();
+        });
+      }
+    </script>
+  </body>
+</html>

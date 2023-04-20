@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz 4-3</title>
+  </head>
+  <body>
+    <h1 id="header">Go Celtics!</h1>
+    <img id="tatum" src="images/tatum1.webp" alt="Jayson Tatum's Jersey" />
+    <img id="brown" src="images/brown1.webp" alt="Jaylen Brown'sJersey" />
+    <img id="bird" src="images/bird1.webp" alt="Larry Bird's Jersey" />
+    <img id="garnett" src="images/garnett1.webp" alt="Kevin Garnett's Jersey" />
+
+    <script>
+      const jerseys = [
+        {
+          id: "tatum",
+          name: "Jayson Tatum",
+          front: "images/tatum1.webp",
+          back: "images/tatum2.webp",
+        },
+        {
+          id: "brown",
+          name: "Jaylen Brown",
+          front: "images/brown1.webp",
+          back: "images/brown2.webp",
+        },
+        {
+          id: "bird",
+          name: "Larry Bird",
+          front: "images/bird1.webp",
+          back: "images/bird2.webp",
+        },
+        {
+          id: "garnett",
+          name: "Kevin Garnett",
+          front: "images/garnett1.webp",
+          back: "images/garnett2.webp",
+        },
+      ];
+
+      const header = document.querySelector("#header");
+
+      jerseys.forEach((jersey) => {
+        const img = document.querySelector(`#${jersey.id}`);
+        img.addEventListener("mouseover", () => {
+          img.setAttribute("src", jersey.back);
+          header.textContent = `${jersey.name}'s Jersey`;
+        });
+        img.addEventListener("mouseout", () => {
+          img.setAttribute("src", jersey.front);
+          header.textContent = "Let's go Celtics!";
+        });
+      });
+
+      /*
+        The above code block can be replaced with the following code block to use a for loop instead of forEach:
+        
+        for (let i = 0; i < jerseys.length; i++) {
+          const jersey = jerseys[i];
+          const img = document.querySelector(`#${jersey.id}`);
+          img.addEventListener("mouseover", () => {
+            img.setAttribute("src", jersey.back);
+            header.textContent = `${jersey.name}'s Jersey`;
+          });
+          img.addEventListener("mouseout", () => {
+            img.setAttribute("src", jersey.front);
+            header.textContent = "Let's go Celtics!";
+          });
+        }
+      */
+    </script>
+  </body>
+</html>

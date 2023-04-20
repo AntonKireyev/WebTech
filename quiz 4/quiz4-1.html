@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz 4-1</title>
+  </head>
+  <body>
+    <form id="form">
+      <div>
+        <label>N =<input name="N" size="10" type="text" id="number" /></label>
+      </div>
+      <div>
+        <input name="calc" type="button" value="Calculate" id="button" />
+      </div>
+      <div>The sum is <span id="result">?</span>.</div>
+    </form>
+
+    <script>
+      const button = document.querySelector("#button");
+      const resultTxt = document.querySelector("#result");
+
+      function calc() {
+        console.log("..thinking");
+        let n = document.getElementById("number").value;
+        let sum = 0;
+
+        // asked chatGPT for help here, it suggested doing i++ in the for loop, then creating an if-else statement inside the loop to determine if the value is positive or negative.
+        for (let i = 1; i <= n; i++) {
+          if (i % 2 == 0) {
+            sum -= 1 / i;
+          } else {
+            sum += 1 / i;
+          }
+        }
+        resultTxt.innerHTML = `${sum}`;
+      }
+      button.addEventListener("click", function () {
+        calc();
+      });
+    </script>
+  </body>
+</html>

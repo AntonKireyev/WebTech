@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz 4-2</title>
+  </head>
+  <body>
+    <div>
+      <div data-target="8000" id="instagram-follower-number">0</div>
+      <span>Instagram Followers</span>
+    </div>
+    <div>
+      <div data-target="12000" id="tiktok-follower-number">0</div>
+      <span>TikTok Followers</span>
+    </div>
+    <script>
+      const instaNumber = document.querySelector("#instagram-follower-number");
+      const tiktokNumber = document.querySelector("#tiktok-follower-number");
+      function counter() {
+        let instaCount = parseInt(instaNumber.innerText);
+        let tiktokCount = parseInt(tiktokNumber.innerText);
+        // used chat GPT to figure out how to STOP the function after a certain time, the main principle is the same to my code. Chat GPT uses a series of if statements to determine the count and decide to keep going or stop.
+        if (instaCount < 8000) {
+          instaCount += 200;
+          instaNumber.innerText = instaCount;
+        }
+
+        if (tiktokCount < 12000) {
+          tiktokCount += 300;
+          tiktokNumber.innerText = tiktokCount;
+        }
+
+        if (instaCount < 8000 || tiktokCount < 12000) {
+          setTimeout(counter, 50);
+        }
+      }
+
+      // I am not entirely sure WHY i need this code, perhaps for the first iteration?
+      setTimeout(counter, 50);
+
+      document.addEventListener("DOMContentloaded", function () {
+        counter();
+      });
+    </script>
+  </body>
+</html>
